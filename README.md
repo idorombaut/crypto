@@ -18,45 +18,6 @@ This messaging app implements end-to-end encryption (E2EE) for secure communicat
 - `socket`: Used for handling TCP/IP socket communication.
 - `threading`: Used for creating and managing threads to handle multiple client connections concurrently.
 
-## Setup Instructions
-
-### Step 1: Clone the Repository
-```
-git clone https://github.com/idorombaut/crypto.git
-cd crypto
-```
-
-### Step 2: Set Up a Virtual Environment
-1. **Create a Virtual Environment**
-   ```
-   python -m venv venv
-   ```
-
-2. **Activate the Virtual Environment**
-   - **Windows**:
-     ```
-     .\venv\Scripts\activate
-     ```
-   - **macOS/Linux**:
-     ```
-     source venv/bin/activate
-     ```
-
-3. **Install Dependencies**
-   ```
-   pip install cryptography
-   ```
-
-### Step 3: Run the Server
-```
-python server.py
-```
-
-### Step 4: Run the Client
-```
-python client.py
-```
-
 ## System Architecture
 
 ### Server Side
@@ -129,7 +90,55 @@ Once the client is registered successfully, they are ready to send and receive e
 4. **Message Integrity**:
    - Each message is signed by the sender using their private key. The server and the recipient can verify this signature to ensure that the message hasn’t been tampered with.
 
+![Socket Connection Initialization](https://github.com/idorombaut/crypto/blob/main/draw.io/phase%20one.png)
+
+![Registration](https://github.com/idorombaut/crypto/blob/main/draw.io/phase%20three.png)
+
+![Sending and Receiving Messages](https://github.com/idorombaut/crypto/blob/main/draw.io/phase%20two.png)
+
 ## Limitations
 - **Client Limit**: The server can handle up to 10 active clients at a time (configured by `MAX_CLIENTS`).
 - **Message Queue Limit**: There is a maximum size for the message queue for each client (`MAX_QUEUE_SIZE`).
 
+## Setup Instructions
+
+### Step 1: Clone the Repository
+```
+git clone https://github.com/idorombaut/crypto.git
+cd crypto
+```
+
+### Step 2: Set Up a Virtual Environment
+1. **Create a Virtual Environment**
+   ```
+   python -m venv venv
+   ```
+
+2. **Activate the Virtual Environment**
+   - **Windows**:
+     ```
+     .\venv\Scripts\activate
+     ```
+   - **macOS/Linux**:
+     ```
+     source venv/bin/activate
+     ```
+
+3. **Install Dependencies**
+   ```
+   pip install cryptography
+   ```
+
+### Step 3: Run the Server
+```
+python server.py
+```
+
+### Step 4: Run the Client
+```
+python client.py
+```
+
+![Chatting Client Side](https://github.com/idorombaut/crypto/blob/main/screenshots/chat%20alice.png)
+
+![Chatting Server Side](https://github.com/idorombaut/crypto/blob/main/screenshots/chat%20server.png)
