@@ -90,10 +90,15 @@ Once the client is registered successfully, they are ready to send and receive e
 4. **Message Integrity**:
    - Each message is signed by the sender using their private key. The server and the recipient can verify this signature to ensure that the message hasn’t been tampered with.
 
+### Illustrative Diagrams
+
+#### Socket Connection Initialization
 ![Socket Connection Initialization](https://github.com/idorombaut/crypto/blob/main/draw.io/phase%20one.png)
 
+#### Registration
 ![Registration](https://github.com/idorombaut/crypto/blob/main/draw.io/phase%20three.png)
 
+#### Sending and Receiving Messages
 ![Sending and Receiving Messages](https://github.com/idorombaut/crypto/blob/main/draw.io/phase%20two.png)
 
 ## Limitations
@@ -139,6 +144,10 @@ python server.py
 python client.py
 ```
 
-![Chatting Client Side](https://github.com/idorombaut/crypto/blob/main/screenshots/chat%20alice.png)
+## Chat Screenshots
 
-![Chatting Server Side](https://github.com/idorombaut/crypto/blob/main/screenshots/chat%20server.png)
+### Client Side
+![Client Side Chatting](https://github.com/idorombaut/crypto/blob/main/screenshots/chat%20alice.png)
+
+### Server Side
+![Server Side Chatting](https://github.com/idorombaut/crypto/blob/main/screenshots/chat%20server.png)
